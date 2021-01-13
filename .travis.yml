@@ -2,9 +2,13 @@ language: java
 jdk:
   - openjdk8
 
-script: ./mvnw clean install
+# Pre-testing installs
+install:
+  - echo "nothing to install.."
 
-jobs:
-  include:
-    - stage: Test
-      script: ./mvnw clean install
+# Scripts to be run such as tests
+before_script:
+  - echo "before script is nothiiiiing...."
+
+script:
+  - ./mvnw clean installript: ./mvnw clean install -Drevision=$(git rev-parse --short HEAD)
