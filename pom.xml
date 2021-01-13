@@ -76,7 +76,7 @@
                 <version>1.4.13</version>
                 <configuration>
                     <!--added useMavenSettingAuth tag and set to be true to read the credential from settings.xml under ~/.m2 folder-->
-                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>
+<!--                    <useMavenSettingsForAuth>true</useMavenSettingsForAuth>-->
                     <!-- ***********************************************************************************************************-->
                     <repository>thiethaa/${project.artifactId}</repository>
                     <!--change docker image tag -->
@@ -92,7 +92,8 @@
                         <phase>install</phase>
                         <goals>
                             <goal>build</goal>
-<!--                          <goal>push</goal>-->
+<!-- do docker push from .travis.yaml file
+                            <goal>push</goal>-->
                         </goals>
                     </execution>
                 </executions>
