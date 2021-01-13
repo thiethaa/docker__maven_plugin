@@ -15,5 +15,5 @@ script:
 
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-  - docker tag docker-maven-plugin $DOCKER_USERNAME/docker-maven-plugin:v.11223
-  - docker push $DOCKER_USERNAME/docker-maven-plugin:v.11223
+  - docker tag docker-maven-plugin $DOCKER_USERNAME/docker-maven-plugin
+  - docker push $DOCKER_USERNAME/docker-maven-plugin
