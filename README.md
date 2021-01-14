@@ -1,4 +1,6 @@
 # docker__maven_plugin
+
+this project will create and push docker image with tagname/version as same as git commit number.
 to build docker image only:
 
        <build>
