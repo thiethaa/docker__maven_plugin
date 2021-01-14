@@ -13,7 +13,7 @@ before_script:
 script:
   - ./mvnw clean install -Drevision=$(git rev-parse --short HEAD)
 
-#docker push
+#docker push to docker hub
 after_success:
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
   - docker tag docker-maven-plugin $DOCKER_USERNAME/docker-maven-plugin
